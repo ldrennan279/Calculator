@@ -1,0 +1,48 @@
+/* color palete */:root{
+    --col1: #ECF4D6;
+    --col2: #9AD0C2;
+    --col3: #2D9596;
+    --col4: #265073;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: lightcyan;
+}
+#main{
+    background-color: var(--col3);
+    margin: 20px auto;
+    padding: 5px;
+    width: 300px;
+    border-radius: 5px;
+}
+.resultDisplay{
+    width: 98%;
+    background-color: var(--col2);
+    margin: 2px;
+    border-radius: 5px ;
+    color: var(--col4);
+    padding: 5px;
+}
+button{
+    background-color: var(--col4);
+    padding: 5px;
+    margin: 2px;
+    font-size: 2rem;
+    color: var(--col1);
+    min-width: 50px;
+    border: none;
+    border-radius: 5px;
+}
+.keyPad{
+    width: 100%;
+    display: flex;
+}
+.sideKeyPad{
+    display: flex;
+    flex-direction: column;
+}
