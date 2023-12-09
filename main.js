@@ -1,21 +1,23 @@
 const main = document.getElementById("display")
-let numberArr = [12, 12]
-const totalResult = ``
-let savedNumber = "24"
+let savedNumber = ''
 
-function currentNumber(){
-    document.addEventListener("click", ()=>{
+document.addEventListener("click", (e)=>{
+    if (e.target.className === 'number'){
+        let btn = e.target.value
+        savedNumber += btn
+        }
+    // } else if(e.target.className === 'operator'){
 
-    })
-}
+    // } else if(e.target.className === 'equals'){
 
-function add(){
+    // } else if(e.target.className === 'delete')
+    
 
-}
+})
 
-main.innerHTML += `
-    <div class="resultDisplay">
-        <p>${numberArr}</p>
-        <p>${savedNumber}</p>
-    <div>
-`
+
+// main.innerHTML += `
+//     <div class="resultDisplay">
+//         <p>0</p>
+//     <div>
+// `

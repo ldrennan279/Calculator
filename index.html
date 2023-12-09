@@ -9,39 +9,41 @@
 <body>
     <main id="main">
         <div id="display">
-
+            <div class="resultDisplay">
+                <p>0</p>
+            <div>
         </div>
         <div class="keyPad">
             <section class="mainKeyPad">
                 <div class="row1">
-                    <button>+</button>
-                    <button>-</button>
-                    <button>x</button>
+                    <button value="+" id="plusBtn" class="operator"> + </button>
+                    <button value="-" id="minusBtn" class="operator"> - </button>
+                    <button value="*" id="multiplyBtn" class="operator"> x </button>
                 </div>
                 <div class="row2">
-                    <button>7</button>
-                    <button>8</button>
-                    <button>9</button>
+                    <button value="7" id="seven" class="number"> 7 </button>
+                    <button value="8" id="eight" class="number"> 8 </button>
+                    <button value="9" id="nine" class="number"> 9 </button>
                 </div>
                 <div class="row3">
-                    <button>4</button>
-                    <button>5</button>
-                    <button>6</button>
+                    <button value="4" id="four" class="number"> 4 </button>
+                    <button value="5" id="five" class="number"> 5 </button>
+                    <button value="6" id="six" class="number"> 6 </button>
                 </div>
                 <div class="row4">
-                    <button>1</button>
-                    <button>2</button>
-                    <button>3</button>
+                    <button value="1" id="one" class="number"> 1 </button>
+                    <button value="2" id="two" class="number"> 2 </button>
+                    <button value="3" id="three" class="number"> 3 </button>
                 </div>
                 <div class="row5">
-                    <button>0</button>
-                    <button>.</button>
+                    <button value="0" id="zero" class="number"> 0 </button>
+                    <button value="." id="decimal" class="number"> . </button>
                 </div>
             </section>
             <section class="sideKeyPad">
-                <button>&#247;</button>
-                <button>C</button>
-                <button>=</button>
+                <button value="/" id="divideBtn" class="operator"> &#247; </button>
+                <button value="C" id="clearBtn" class="delete"> C </button>
+                <button value="=" id="equalsBtn" class="equals"> = </button>
             </section>
         </div>
         

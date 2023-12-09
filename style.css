@@ -20,7 +20,7 @@ body{
     width: 300px;
     border-radius: 5px;
 }
-.resultDisplay{
+.display{
     width: 98%;
     background-color: var(--col2);
     margin: 2px;
