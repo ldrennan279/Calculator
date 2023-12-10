@@ -20,13 +20,15 @@ body{
     width: 300px;
     border-radius: 5px;
 }
-.display{
+#resultDisplay{
     width: 98%;
     background-color: var(--col2);
     margin: 2px;
     border-radius: 5px ;
     color: var(--col4);
     padding: 5px;
+    text-align: right;
+    font-size: 2rem;
 }
 button{
     background-color: var(--col4);
