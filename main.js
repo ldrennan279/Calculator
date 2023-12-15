@@ -10,10 +10,12 @@ document.addEventListener("click", (e)=>{
 
 
         } else if(e.target.className === 'operator'){
-            let btn = e.target.value
-            console.log(btn)
             newTotalNumber = displayedNumber
-            
+            console.log(newTotalNumber)
+            displayedNumber = ''
+            console.log(displayedNumber)
+        } else if(e.target.id === 'plusBtn'){
+            add()
         }
     // } else if(e.target.className === 'equals'){
 
@@ -22,7 +24,9 @@ document.addEventListener("click", (e)=>{
 
 })
 
-
+function add(num1, num2){
+   let sum = num1 + num2
+}
 function updateDisplay(){
     display.innerHTML = `
             <p>${displayedNumber}</p>
