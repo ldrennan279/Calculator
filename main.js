@@ -1,6 +1,7 @@
 const display = document.getElementById("savedNumber")
 let displayedNumber = ''
-let newTotalNumber = ''
+let storedNumber = ''
+let calculationResult = ''
 
 document.addEventListener("click", (e)=>{
     if (e.target.className === 'number'){
@@ -9,29 +10,21 @@ document.addEventListener("click", (e)=>{
         updateDisplay()
 
 
-        } else if(e.target.className === 'operator'){
-            newTotalNumber = displayedNumber
-            console.log(newTotalNumber)
-            displayedNumber = ''
-            console.log(displayedNumber)
-        } else if(e.target.id === 'plusBtn'){
-            add()
-        }
-    // } else if(e.target.className === 'equals'){
-
-    // } else if(e.target.className === 'delete')
-
-
+        } else if(e.target.className === 'operator' && e.target.id === 'plusBtn'){
+            calculationResult = storedNumber + displayedNumber    
+            console.log(calculationResult)
+            displayedNumber = 0
+    
+}
 })
 
-function add(num1, num2){
-   let sum = num1 + num2
-}
+
 function updateDisplay(){
-    display.innerHTML = `
+        display.innerHTML = `
             <p>${displayedNumber}</p>
 
-`
+        `
+    
 }
 
 
