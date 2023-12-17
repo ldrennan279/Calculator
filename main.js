@@ -1,37 +1,53 @@
 const display = document.getElementById("savedNumber")
-let displayedNumber = ''
-let newTotalNumber = ''
 
-document.addEventListener("click", (e)=>{
-    if (e.target.className === 'number'){
-        let btn = e.target.value
-        displayedNumber += btn
+let firstNumber
+let secondNumber
+let operator
+let numberEnteredResult = []
+let step = 0
+
+document.addEventListener('click', (e) => {
+    if(e.target.className === 'number'){
+        let keyedNumber = e.target.value
+        numberEnteredResult.push(keyedNumber)
         updateDisplay()
-
-
-        } else if(e.target.className === 'operator'){
-            let btn = e.target.value
-            console.log(btn)
-            newTotalNumber = displayedNumber
-            
-            console.log(newTotalNumber)
-            displayedNumber = ''
-            console.log(displayedNumber)
-        } else if(e.target.id === 'plusBtn'){
-            add()
+    } else if (e.target.className === 'operator'){
+        let operator = e.target.value
+            if(step === 0){
+                firstNumber = numberEnteredResult.join('')
+                numberEnteredResult = []
+                step = 1
+            }else if(step === 1){
+                secondNumber = numberEnteredResult.join('')
+                numberEnteredResult = []
+                
+                if(operator === '+'){
+                    let result = parseFloat(firstNumber) + parseFloat(secondNumber)
+                    numberEnteredResult.push(result)
+                    updateDisplay()
+                    step = 1
+                    secondNumber = ''
+                    firstNumber = numberEnteredResult.join('')
+                    numberEnteredResult = []
+                } 
         }
-    // } else if(e.target.className === 'equals'){
-
+    }
 
 })
 
+function calculation(){
+                    
+                    updateDisplay()
+                    step = 0
+                    secondNumber = ''
+                    firstNumber = numberEnteredResult.join('')
+                    numberEnteredResult = []
+                    operator = ''
+                }
 
-function add(num1, num2){
-   let sum = num1 + num2
-}
 function updateDisplay(){
     display.innerHTML = `
-            <p>${displayedNumber}</p>
+            <p>${numberEnteredResult.join('')}</p>
 
 `
 }
