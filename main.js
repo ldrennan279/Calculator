@@ -35,16 +35,6 @@ document.addEventListener('click', (e) => {
 
 })
 
-function calculation(){
-                    
-                    updateDisplay()
-                    step = 0
-                    secondNumber = ''
-                    firstNumber = numberEnteredResult.join('')
-                    numberEnteredResult = []
-                    operator = ''
-                }
-
 function updateDisplay(){
     display.innerHTML = `
             <p>${numberEnteredResult.join('')}</p>
