@@ -29,6 +29,14 @@ document.addEventListener('click', (e) => {
                     secondNumber = ''
                     firstNumber = numberEnteredResult.join('')
                     numberEnteredResult = []
+                } else if(operator === '-'){
+                    let result = parseFloat(firstNumber) - parseFloat(secondNumber)
+                    numberEnteredResult.push(result)
+                    updateDisplay()
+                    step = 1
+                    secondNumber = ''
+                    firstNumber = numberEnteredResult.join('')
+                    numberEnteredResult = []
                 } 
         }
     }
